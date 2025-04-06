@@ -4,6 +4,6 @@ img.scale-with-grid {
   display: block;
 }
 h6 {
-  font-size: 12px; /* or 11px if you want it even tighter */
-  font-weight: normal; /* optional: make it lighter */
+  font-size: 14px; 
+  font-weight: normal; 
 }
