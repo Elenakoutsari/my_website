@@ -4,12 +4,52 @@
   <meta charset="utf-8"> 
   <title>Koutsari Elena</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/customize.css">
+
+  <style>
+    /* --- CUSTOM COLORS & TYPOGRAPHY --- */
+    body { 
+      background-color: #111111; /* Dark background */
+      color: #eeeeee;            /* Light text */
+    }
+    h2, h3, h5 { color: #ffffff; font-weight: 300; }
+    a { color: #33C3F0; text-decoration: none; }
+    hr { border-top: 1px solid #333; }
+
+    /* --- LIGHTBOX (ENLARGE ON CLICK) --- */
+    #lightbox {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9); /* Fades background */
+      display: none; justify-content: center; align-items: center;
+      z-index: 9999; cursor: pointer;
+    }
+    #lightbox img { 
+      max-width: 90%; max-height: 80%; 
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      border: 2px solid #444;
+    }
+    
+    /* Hover effect to show images are clickable */
+    .scale-with-grid { 
+      cursor: pointer; 
+      transition: opacity 0.3s, transform 0.3s; 
+    }
+    .scale-with-grid:hover { 
+      opacity: 0.8; 
+      transform: scale(1.02);
+    }
+  </style>
 </head>
 <body>
+
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="">
+  </div>
 
   <div id="info" class="container">
     <div id="course_info" class="row one-top">
@@ -25,90 +65,90 @@
 
     <h3 class="half-bottom">1. Still Life</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/IMG_1633.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_1640.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_1631.jpeg" class="scale-with-grid"></div>
+      <div class="four columns"><img src="images/IMG_1633.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_1640.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_1631.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">2. Paintings</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/IMG_1643.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_1647.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_1645.jpeg" class="scale-with-grid"></div>
+      <div class="four columns"><img src="images/IMG_1643.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_1647.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_1645.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">3. Pencil Work</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/IMG_2608.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_3559.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_1659.jpeg" class="scale-with-grid"></div>
+      <div class="four columns"><img src="images/IMG_2608.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_3559.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_1659.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">4. Charcoal Work</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/IMG_3818.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_3799.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/IMG_4820.jpeg" class="scale-with-grid"></div>
+      <div class="four columns"><img src="images/IMG_3818.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_3799.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/IMG_4820.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">5. Architectural Designs</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/1.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/2.jpeg" class="scale-with-grid"></div>
-      <div class="four columns"><img src="images/3.jpeg" class="scale-with-grid"></div>
+      <div class="four columns"><img src="images/1.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/2.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
+      <div class="four columns"><img src="images/3.jpeg" class="scale-with-grid" onclick="showImg(this.src)"></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">6. Sculptures</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/Stoic Sceptisism.jpeg" class="scale-with-grid"><h5>Stoic Sceptisism</h5></div>
-      <div class="four columns"><img src="images/Archaic Playground.jpeg" class="scale-with-grid"><h5>Archaic Playground</h5></div>
-      <div class="four columns"><img src="images/Floautomobile.jpeg" class="scale-with-grid"><h5>Floautomobile</h5></div>
+      <div class="four columns"><img src="images/Stoic Sceptisism.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Stoic Sceptisism</h5></div>
+      <div class="four columns"><img src="images/Archaic Playground.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Archaic Playground</h5></div>
+      <div class="four columns"><img src="images/Floautomobile.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Floautomobile</h5></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">7. Models</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/Co-living.jpeg" class="scale-with-grid"><h5>Co-living</h5></div>
-      <div class="four columns"><img src="images/Antonopoulos.jpeg" class="scale-with-grid"><h5>Antonopoulos</h5></div>
-      <div class="four columns"><img src="images/House of a photographer.jpeg" class="scale-with-grid"><h5>House of a photographer</h5></div>
+      <div class="four columns"><img src="images/Co-living.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Co-living</h5></div>
+      <div class="four columns"><img src="images/Antonopoulos.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Antonopoulos</h5></div>
+      <div class="four columns"><img src="images/House of a photographer.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>House of a photographer</h5></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">8. Geometric Systems</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/Pet throne.jpeg" class="scale-with-grid"><h5>Pet throne</h5></div>
-      <div class="four columns"><img src="images/Paraboloid.jpeg" class="scale-with-grid"><h5>Paraboloid</h5></div>
-      <div class="four columns"><img src="images/Double Curvature.jpeg" class="scale-with-grid"><h5>Double Curvature</h5></div>
+      <div class="four columns"><img src="images/Pet throne.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Pet throne</h5></div>
+      <div class="four columns"><img src="images/Paraboloid.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Paraboloid</h5></div>
+      <div class="four columns"><img src="images/Double Curvature.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Double Curvature</h5></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">9. Crochet / Knitting</h3>
     <div class="row half-bottom">
-      <div class="four columns"><img src="images/Nana.jpeg" class="scale-with-grid"><h5>Nana</h5></div>
-      <div class="four columns"><img src="images/Calico Scarf.jpeg" class="scale-with-grid"><h5>Calico Scarf</h5></div>
-      <div class="four columns"><img src="images/Teddy.jpeg" class="scale-with-grid"><h5>Teddy</h5></div>
+      <div class="four columns"><img src="images/Nana.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Nana</h5></div>
+      <div class="four columns"><img src="images/Calico Scarf.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Calico Scarf</h5></div>
+      <div class="four columns"><img src="images/Teddy.jpeg" class="scale-with-grid" onclick="showImg(this.src)"><h5>Teddy</h5></div>
     </div>
     <hr>
 
     <h3 class="half-bottom">10. Interactive Games</h3>
     <div class="row half-bottom">
       <div class="four columns">
-        <img src="images/Bubble.png" class="scale-with-grid">
-        <h5><a href="https://editor.p5js.org/elenakoutsari/full/YbLdETswg">Bubble Trouble</a></h5>
+        <img src="images/Bubble.png" class="scale-with-grid" onclick="showImg(this.src)">
+        <h5><a href="https://editor.p5js.org/elenakoutsari/full/YbLdETswg" target="_blank">Bubble Trouble</a></h5>
       </div>
       <div class="four columns">
-        <img src="images/Space Shooters.png" class="scale-with-grid">
+        <img src="images/Space Shooters.png" class="scale-with-grid" onclick="showImg(this.src)">
         <h5>Space Shooters</h5>
-        <h6>To play the game click <a href="https://editor.p5js.org/elenakoutsari/full/2seBPlD0E">here</a></h6>
+        <h6>To play the game click <a href="https://editor.p5js.org/elenakoutsari/full/2seBPlD0E" target="_blank">here</a></h6>
       </div>
       <div class="four columns">
-        <img src="images/Final.png" class="scale-with-grid">
-        <h5><a href="https://elenakoutsari.github.io/Sense-of-insecurity-in-the-architectural-environment/">Safety Maps</a></h5>
+        <img src="images/Final.png" class="scale-with-grid" onclick="showImg(this.src)">
+        <h5><a href="https://elenakoutsari.github.io/Sense-of-insecurity-in-the-architectural-environment/" target="_blank">Safety Maps</a></h5>
       </div>
     </div>
 
@@ -118,6 +158,13 @@
     </div>
 
   </div>
+
+  <script>
+    function showImg(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+  </script>
 
 </body>
 </html>
